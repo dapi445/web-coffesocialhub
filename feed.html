@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed - Coffee Social Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png" alt="Coffee Social Hub Logo" class="logo-img">
+                    <span class="logo-text">Coffee Social Hub</span>
+                </a>
+            </div>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="feed.html" class="active">Feed</a></li>
+                    <li><a href="events.html">Event</a></li>
+                    <li><a href="order.html">Pesan Kopi</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn-login">Masuk</button>
+                    <button class="btn-register">Daftar</button>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Feed Section -->
+    <main class="feed-container">
+        <!-- Feed Sidebar -->
+        <aside class="feed-sidebar">
+            <div class="profile-summary">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Picture" class="profile-pic">
+                <h3>Ahmad Rizki</h3>
+                <p>@ahmadrizki</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-value">120</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">1.2K</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">890</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trending-topics">
+                <h3>Trending Topics</h3>
+                <ul class="topic-list">
+                    <li><a href="#">#ManualBrewing</a></li>
+                    <li><a href="#">#LatteArt</a></li>
+                    <li><a href="#">#KopiIndonesia</a></li>
+                    <li><a href="#">#CoffeeLover</a></li>
+                    <li><a href="#">#BaristaLife</a></li>
+                </ul>
+            </div>
+
+            <div class="suggested-users">
+                <h3>Rekomendasi untuk Diikuti</h3>
+                <div class="user-suggestions">
+                    <div class="suggested-user">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Suggested User">
+                        <div class="user-info">
+                            <h4>Sarah Diana</h4>
+                            <p>Barista @CoffeeStudio</p>
+                        </div>
+                        <button class="btn-follow">Ikuti</button>
+                    </div>
+                    <div class="suggested-user">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Suggested User">
+                        <div class="user-info">
+                            <h4>Budi Santoso</h4>
+                            <p>Coffee Roaster</p>
+                        </div>
+                        <button class="btn-follow">Ikuti</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Feed Content -->
+        <section class="feed-content">
+            <!-- Create Post -->
+            <div class="create-post">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Your Profile" class="user-avatar">
+                <div class="post-input">
+                    <input type="text" placeholder="Bagikan cerita kopimu hari ini...">
+                    <div class="post-actions">
+                        <button class="post-action"><i class="fas fa-image"></i> Foto</button>
+                        <button class="post-action"><i class="fas fa-map-marker-alt"></i> Lokasi</button>
+                        <button class="post-action"><i class="fas fa-tag"></i> Tag</button>
+                        <button class="btn-post">Posting</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed Filter -->
+            <div class="feed-filter">
+                <button class="filter-btn active">Semua</button>
+                <button class="filter-btn">Following</button>
+                <button class="filter-btn">Popular</button>
+                <button class="filter-btn">Terbaru</button>
+            </div>
+
+            <!-- Posts -->
+            <div class="posts-container">
+                <!-- Post items dari index.html bisa direplikasi di sini dengan konten yang berbeda -->
+                <!-- Tambahkan lebih banyak post dengan variasi konten -->
+            </div>
+
+            <button class="load-more">Muat Lebih Banyak</button>
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="upcoming-events-widget">
+                <h3>Event Terdekat</h3>
+                <div class="mini-event-card">
+                    <div class="event-date">
+                        <span class="date">25</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="event-info">
+                        <h4>Coffee Cupping Session</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Jakarta Coffee Week</p>
+                    </div>
+                </div>
+                <a href="events.html" class="view-all-events">Lihat Semua Event</a>
+            </div>
+
+            <div class="coffee-shops-widget">
+                <h3>Kedai Kopi Terdekat</h3>
+                <div class="shop-list">
+                    <div class="shop-item">
+                        <div class="shop-image">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=300&h=200" alt="Coffee Shop">
+                        </div>
+                        <div class="shop-info">
+                            <h4>Kopi Kenangan</h4>
+                            <div class="shop-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                                <span class="review-count">(230 reviews)</span>
+                            </div>
+                            <p class="shop-distance"><i class="fas fa-map-marker-alt"></i> 0.5 km</p>
+                        </div>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-image">
+                            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=300&h=200" alt="Coffee Shop">
+                        </div>
+                        <div class="shop-info">
+                            <h4>Starbucks</h4>
+                            <div class="shop-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                                <span class="review-count">(180 reviews)</span>
+                            </div>
+                            <p class="shop-distance"><i class="fas fa-map-marker-alt"></i> 0.8 km</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png" alt="Coffee Social Hub Logo">
+                <p>Coffee Social Hub</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Dapatkan update terbaru dari kami</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Anda">
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Coffee Social Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

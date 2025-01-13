@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Kopi - Coffee Social Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal/minimal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <img src="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png" alt="Coffee Social Hub Logo">
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png" alt="Coffee Social Hub Logo" class="logo-img">
+                    <span class="logo-text">Coffee Social Hub</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="events.html">Event</a></li>
+                <li><a href="#" class="active">Pesan Kopi</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Order Hero Section -->
+    <section class="order-hero">
+        <div class="container">
+            <h1>Menu Kopi Pilihan</h1>
+            <p>Nikmati berbagai pilihan kopi berkualitas dari biji pilihan terbaik</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <div class="menu-categories">
+        <button class="category-btn active" data-category="semua">Semua Menu</button>
+        <button class="category-btn" data-category="espresso">Espresso</button>
+        <button class="category-btn" data-category="manual">Manual Brew</button>
+        <button class="category-btn" data-category="signature">Signature</button>
+        <button class="category-btn" data-category="snack">Snack</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <section class="menu-grid container">
+        <!-- Menu Item 1 - Espresso -->
+        <div class="menu-item" data-category="espresso" data-id="1">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" alt="Cappuccino">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Cappuccino</h3>
+                    <span class="menu-item-price">Rp 28.000</span>
+                </div>
+                <p class="menu-item-description">Espresso dengan steamed milk dan foam yang lembut</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(120)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 2 - Manual Brew -->
+        <div class="menu-item" data-category="manual" data-id="2">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="V60">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">V60</h3>
+                    <span class="menu-item-price">Rp 25.000</span>
+                </div>
+                <p class="menu-item-description">Manual brew dengan metode V60, menghasilkan kopi yang bersih dan jernih</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(85)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 3 - Signature -->
+        <div class="menu-item" data-category="signature" data-id="3">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Affogato">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Affogato</h3>
+                    <span class="menu-item-price">Rp 32.000</span>
+                </div>
+                <p class="menu-item-description">Es krim vanilla dengan shot espresso panas</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(150)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 4 - Espresso -->
+        <div class="menu-item" data-category="espresso" data-id="4">
+            <img src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8" alt="Caramel Latte">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Caramel Latte</h3>
+                    <span class="menu-item-price">Rp 30.000</span>
+                </div>
+                <p class="menu-item-description">Espresso dengan steamed milk dan caramel syrup</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(98)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 5 - Manual Brew -->
+        <div class="menu-item" data-category="manual" data-id="5">
+            <img src="https://images.unsplash.com/photo-1545665225-b23b99e4d45e" alt="Chemex">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Chemex</h3>
+                    <span class="menu-item-price">Rp 28.000</span>
+                </div>
+                <p class="menu-item-description">Manual brew dengan metode Chemex, menghasilkan kopi yang bersih dan seimbang</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(75)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 6 - Signature -->
+        <div class="menu-item" data-category="signature" data-id="6">
+            <img src="https://images.unsplash.com/photo-1594261956806-3ad03785c9b4" alt="Es Kopi Susu">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Es Kopi Susu Gula Aren</h3>
+                    <span class="menu-item-price">Rp 27.000</span>
+                </div>
+                <p class="menu-item-description">Espresso, susu segar, dan gula aren premium</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(200)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 7 - Snack -->
+        <div class="menu-item" data-category="snack" data-id="7">
+            <img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191" alt="Croissant">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Butter Croissant</h3>
+                    <span class="menu-item-price">Rp 22.000</span>
+                </div>
+                <p class="menu-item-description">Croissant butter premium yang renyah di luar dan lembut di dalam</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(180)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Item 8 - Snack -->
+        <div class="menu-item" data-category="snack" data-id="8">
+            <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125" alt="Sandwich">
+            <div class="menu-item-content">
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">Club Sandwich</h3>
+                    <span class="menu-item-price">Rp 35.000</span>
+                </div>
+                <p class="menu-item-description">Triple layer sandwich dengan ayam panggang, telur, dan sayuran segar</p>
+                <div class="menu-item-footer">
+                    <div class="menu-item-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(145)</span>
+                    </div>
+                    <button class="btn-primary btn-add-cart">
+                        <i class="fas fa-shopping-cart"></i> Tambah
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Keranjang</h3>
+            <span class="cart-count">0</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span class="total-price">Rp 0</span>
+        </div>
+        <button class="btn-primary btn-checkout">
+            Checkout
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/maulana2468/coffee-shop/main/assets/logo.png" alt="Coffee Social Hub Logo">
+                <p>Coffee Social Hub</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Dapatkan update terbaru dari kami</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Anda">
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Coffee Social Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Virtual Assistant -->
+    <div id="coffee-assistant" class="assistant-widget">
+        <div class="assistant-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="assistant-chat">
+            <div class="chat-header">
+                <h3>Coffee Assistant</h3>
+                <button class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" placeholder="Tanya tentang menu...">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

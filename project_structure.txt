@@ -1,0 +1,73 @@
+coffee-social-hub/
+│
+├── index.html
+├── feed.html
+├── events.html
+├── order.html
+│
+├── assets/
+│   ├── logo.png
+│   ├── images/
+│   │   ├── hero-banner.jpg
+│   │   ├── coffee-stories/
+│   │   │   ├── manual-brewing.jpg
+│   │   │   └── latte-art.jpg
+│   │   ├── shops/
+│   │   │   ├── kopi-kenangan.jpg
+│   │   │   └── starbucks.jpg
+│   │   └── users/
+│   │       ├── profile-1.jpg
+│   │       └── profile-2.jpg
+│   └── audio/
+│       └── coffee-shop-ambience.mp3
+│
+├── css/
+│   ├── style.css
+│   ├── components/
+│   │   ├── header.css
+│   │   ├── footer.css
+│   │   ├── feed.css
+│   │   ├── events.css
+│   │   └── order.css
+│   └── utils/
+│       ├── variables.css
+│       └── animations.css
+│
+├── js/
+│   ├── main.js
+│   ├── components/
+│   │   ├── audio-control.js
+│   │   ├── virtual-assistant.js
+│   │   └── loading-screen.js
+│   └── utils/
+│       ├── api.js
+│       └── helpers.js
+│
+└── README.md
+
+Deskripsi Struktur:
+
+1. File HTML Utama:
+- index.html: Halaman beranda
+- feed.html: Halaman feed sosial media
+- events.html: Halaman event kopi
+- order.html: Halaman pemesanan kopi
+
+2. Folder assets/:
+- Menyimpan semua aset statis
+- Subfolder untuk gambar berdasarkan kategori
+- File audio untuk ambient sound
+
+3. Folder css/:
+- style.css: File CSS utama
+- components/: CSS untuk komponen spesifik
+- utils/: Utilitas CSS (variabel, animasi)
+
+4. Folder js/:
+- main.js: JavaScript utama
+- components/: JS untuk komponen spesifik
+- utils/: Fungsi utilitas dan helper
+
+5. README.md:
+- Dokumentasi proyek
+- Instruksi instalasi dan penggunaan 

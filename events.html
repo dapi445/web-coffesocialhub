@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - Coffee Social Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS untuk peta -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.ibb.co/3fHq2VZ/coffee-logo.png" alt="Coffee Social Hub Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="#" class="active">Event</a></li>
+                <li><a href="order.html">Pesan Kopi</a></li>
+                <li><a href="profile.html">Profil</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login">Masuk</button>
+                <button class="btn-register">Daftar</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Event Hero Section -->
+    <section class="event-hero">
+        <div class="container">
+            <h1>Event Kopi</h1>
+            <p>Temukan dan ikuti berbagai event kopi menarik di sekitar Anda</p>
+            <div class="event-search">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cari event...">
+                </div>
+                <div class="search-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select>
+                        <option value="">Semua Lokasi</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                    </select>
+                </div>
+                <button class="btn-search">Cari Event</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="event-categories">
+        <div class="container">
+            <div class="category-list">
+                <button class="category-btn active" data-category="all">Semua</button>
+                <button class="category-btn" data-category="workshop">Workshop</button>
+                <button class="category-btn" data-category="cupping">Cupping</button>
+                <button class="category-btn" data-category="competition">Kompetisi</button>
+                <button class="category-btn" data-category="festival">Festival</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+        <div class="container">
+            <h2>Event Unggulan</h2>
+            <div class="featured-events-grid">
+                <div class="featured-event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Coffee Festival">
+                        <span class="event-category">Festival</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Apr</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Jakarta Coffee Festival 2024</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> JIEXPO Kemayoran, Jakarta</p>
+                            <p class="event-time"><i class="fas fa-clock"></i> 10:00 - 22:00 WIB</p>
+                            <p class="event-price"><i class="fas fa-ticket-alt"></i> Rp 150.000</p>
+                            <button class="btn-join">Daftar Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="upcoming-events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Mendatang</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card" data-category="workshop">
+                    <div class="event-date">
+                        <span class="day">28</span>
+                        <span class="month">Apr</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-tag">Workshop</span>
+                        <h3>Manual Brewing Workshop</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Kedai Kopi Nusantara</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 14:00 - 16:00 WIB</p>
+                        <p class="event-price"><i class="fas fa-ticket-alt"></i> Rp 350.000</p>
+                        <div class="event-description">
+                            <p>Pelajari teknik manual brewing dari barista profesional. Termasuk coffee tasting dan sertifikat.</p>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn-details">Detail</button>
+                            <button class="btn-join">Daftar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card" data-category="cupping">
+                    <div class="event-date">
+                        <span class="day">30</span>
+                        <span class="month">Apr</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-tag">Cupping</span>
+                        <h3>Coffee Cupping Session</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Roastery Lab</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 15:00 - 17:00 WIB</p>
+                        <p class="event-price"><i class="fas fa-ticket-alt"></i> Rp 200.000</p>
+                        <div class="event-description">
+                            <p>Rasakan dan pelajari berbagai karakteristik kopi dari berbagai origin.</p>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn-details">Detail</button>
+                            <button class="btn-join">Daftar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Map -->
+    <section class="event-map">
+        <div class="container">
+            <h2>Peta Event</h2>
+            <div id="eventMap"></div>
+        </div>
+    </section>
+
+    <!-- Create Event -->
+    <section class="create-event">
+        <div class="container">
+            <div class="create-event-content">
+                <div class="create-event-text">
+                    <h2>Punya Event Kopi?</h2>
+                    <p>Bagikan event kopi Anda kepada komunitas kami</p>
+                </div>
+                <button class="btn-create-event">Buat Event</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Assistant -->
+    <div id="coffee-assistant" class="assistant-widget">
+        <div class="assistant-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="assistant-chat">
+            <div class="chat-header">
+                <h3>Coffee Assistant</h3>
+                <button class="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages">
+                <!-- Messages will be added here -->
+            </div>
+            <input type="text" placeholder="Tanya seputar event...">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://i.ibb.co/3fHq2VZ/coffee-logo.png" alt="Coffee Social Hub Logo">
+                </div>
+                <div class="footer-links">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="feed.html">Feed</a></li>
+                        <li><a href="#">Event</a></li>
+                        <li><a href="order.html">Pesan Kopi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Dapatkan update terbaru seputar kopi</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit">Langganan</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coffee Social Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html> 
